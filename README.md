@@ -46,7 +46,12 @@ spring.mail.password=
 
 ### Filtered offer
 <p align="left"> 
-  <img src="https://i.imgur.com/OaSukpe.png"  width="700px">
+  <img src="https://i.imgur.com/vilkX1e.png"  width="700px">
+</p>
+
+### All products
+<p align="left"> 
+  <img src="https://i.imgur.com/C1U5N3Q.png"  width="700px">
 </p>
 
 ### Login page 
@@ -63,10 +68,10 @@ spring.mail.password=
 ### After logging in
 #### you can add/delete your products to cart.
 <p align="left"> 
-  <img src="https://i.imgur.com/SYEe1lj.png"  width="700px">
+  <img src="https://i.imgur.com/SYEe1lj.png"  width="100px">
 </p>
 <p align="left"> 
-  <img src="https://i.imgur.com/POEGELC.png"  width="700px">
+  <img src="https://i.imgur.com/POEGELC.png"  width="100px">
 </p>
 
 ### View cart
