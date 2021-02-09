@@ -7,7 +7,7 @@
    * Full validation
    * Password hashing (`BCrypt`)
 2. [Login](#login-page)
-3. [Viewing all products](#main-page)
+3. [Viewing all products](#all-products)
 4. [Adding product to basket (kg or items)](#after-logging-in)
 5. [Deleting products from basket](#after-logging-in)
 5. [Filtering products](#filtered-offer)
