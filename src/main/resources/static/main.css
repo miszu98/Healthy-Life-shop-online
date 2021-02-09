@@ -1,0 +1,41 @@
+#shop:hover {
+    color: #5cb85c;
+}
+
+#contact:hover {
+    color: #5cb85c;
+}
+
+
+#cart:hover {
+    color: #5cb85c;
+}
+
+#cart {
+    color: #8a8781;
+}
+
+#left, #right {
+    color: #8a8781;
+}
+
+#left:hover, #right:hover {
+    color: #5cb85c;
+}
+
+#switcher {
+    text-align: center;
+}
+
+a {
+    color: #8a8781;
+}
+
+a:hover {
+    color: #5cb85c;
+}
+
+
+
+
+

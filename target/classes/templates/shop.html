@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Healthy Life - store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-light" style="margin-bottom: 5px;">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/main}"><img src="https://i.imgur.com/Pa1vpYt.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div style="margin-top: 35px;" class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a id="shop" style="margin-top: 5px;" class="nav-link" th:href="@{/shop}"><b>Shop</b><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a id="contact" style="margin-top: 5px;" class="nav-link" href="#"><b>Contact</b></a>
+                </li>
+                <li>
+                    <a style="margin-left: 200px;" id="cart" th:href="@{/basket}">
+                        <i style="margin-top: 15px;" class="fas fa-shopping-cart"></i>
+                        (<span th:text="${len}"></span>)
+                        <br>
+                        <small><span style="margin-left: 205px;" th:text="${total}"></span></small>
+                    </a>
+                </li>
+            </ul>
+            <form style="margin-right: 10px;" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search </button>
+            </form>
+        </div>
+        <div sec:authorize="isAuthenticated()">
+            <form style="margin-top: 35px;" th:action="@{/logout}">
+                <button class="btn btn-outline-success my-2 my-sm-1" type="submit">Log out</button>
+            </form>
+        </div>
+        <div sec:authorize="isAnonymous()">
+            <form style="margin-top: 35px;" th:action="@{/login}">
+                <button  class="btn btn-outline-success my-2 my-sm-1" type="submit">Log in</button>
+            </form>
+        </div>
+
+    </div>
+</nav>
+<br><br>
+
+<div class="container">
+    <div style="float: left;">
+        <div class="list-group" style="width: 280px;">
+            <a href="#" style="background-color: #5cb85c" class="list-group-item list-group-item-action active">
+                Categories
+            </a>
+            <form th:action="@{/filtered/fresh fruits}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Fresh fruits</button>
+            </form>
+            <form th:action="@{/filtered/fresh vegetables}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Fresh vegetables</button>
+            </form>
+            <form th:action="@{/filtered/dried fruits}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Dried fruits</button>
+            </form>
+            <form th:action="@{/filtered/vegetable juices}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Vegetable juices</button>
+            </form>
+            <form th:action="@{/filtered/fruits juices}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Fruits juices</button>
+            </form>
+            <form th:action="@{/filtered/ocean Foods}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Ocean Foods</button>
+            </form>
+            <form th:action="@{/filtered/butter eggs}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Butter & eggs</button>
+            </form>
+            <form th:action="@{/filtered/nuts}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Nuts</button>
+            </form>
+            <form th:action="@{/filtered/mushrooms}" method="get">
+                <button type="submit" class="list-group-item list-group-item-action">Mushrooms</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <td th:each="s : ${all}">
+            <div class="col-md-4">
+                <div id="card" class="card mb-2" style="height: 500px; width: 270px;">
+                    <img class="card-img-top" th:src="@{${s.getImg()}}"
+                         alt="Card image cap" width="400px" height="200px">
+                    <div class="card-body">
+                        <h3 class="card-title" th:text="${s.getName()}"></h3>
+                        <p class="card-text" th:text="${s.getDescription()}"></p>
+                        <h4 th:text="${s.getFormatPricePerKg()}"></h4>
+                        <small style="margin-left: 2px;" th:text="${s.getFormatPricePerOne()}"></small><br>
+                        <br>
+                        <br>
+
+                        <form style="margin-top: -40px;" th:object="${order}" th:action="@{/addToCart(id = ${s.getId()})}" method="post">
+                            <input style="margin-left: 2px;" type="radio" th:field="*{type}" th:value="kg" id="kg" name="drone" required> <label for="kg"> kg</label> <input style="margin-left: 2px;" th:field="*{type}" th:value="items" type="radio" id="items" name="drone" required> <label for="items"> items</label>
+                            <br>
+                            <input th:field="*{quantity}" type="number" style="width: 50px;" min="1">
+                            <br>
+                            <button type="submit" style="margin-left: -2px; width: 130px; margin-top: 10px;" class="btn btn-success">add to cart</button> <div style="float: right; margin-top: 15px;"><span th:text="${s.getQuantity()}"></span><span>. in stock</span></div>
+                        </form>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </td>
+    </div>
+</div>
+<br><br><br>
+
+</body>
+</html>
