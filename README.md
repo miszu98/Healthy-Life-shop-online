@@ -70,11 +70,9 @@ spring.mail.password=
 ### After logging in
 #### you can add/delete your products to cart.
 <p align="left"> 
-  <img src="https://i.imgur.com/SYEe1lj.png"  width="300px">
+  <img src="https://i.imgur.com/SYEe1lj.png"  width="250px"><img src="https://i.imgur.com/POEGELC.png"  width="250px">
 </p>
-<p align="left"> 
-  <img src="https://i.imgur.com/POEGELC.png"  width="300px">
-</p>
+
 
 ### View cart
 <p align="left"> 
