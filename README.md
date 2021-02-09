@@ -11,6 +11,8 @@
 4. [Adding product to basket (kg or items)](#after-logging-in)
 5. [Deleting products from basket](#after-logging-in)
 5. [Filtering products](#filtered-offer)
+6. [View cart](#view-cart)
+7. [Placing orders](#order)
 6. [Sending e-mails after registration](#)
 7. [Sending e-mails after submit an order with summary](#)
 
