@@ -39,26 +39,9 @@ spring.mail.password=
 ## Images 
 
 ### Main page
-#### sample offers are added here. Constants in the database. There is also filtering by province.
+#### sample products on sliders, access to login, filter and view the cart after logging in
 <p align="left"> 
-  <img src="https://i.imgur.com/6xxtTm0.png"  width="700px">
-</p>
-
-### Login page 
-#### from which we can log in or go to the registration form.
-<p align="left"> 
-  <img src="https://i.imgur.com/24iL1Wh.png"  width="700px">
-</p>
-
-### Registration form
-<p align="left"> 
-  <img src="https://i.imgur.com/7ZOiIC8.png"  width="700px">
-</p>
-
-### After logging in
-#### you can add/delete your own offers.
-<p align="left"> 
-  <img src="https://i.imgur.com/ZAnbKJk.png"  width="700px">
+  <img src="https://i.imgur.com/8pSLtW2.png"  width="700px">
 </p>
 
 ### Filtered offer
@@ -66,9 +49,34 @@ spring.mail.password=
   <img src="https://i.imgur.com/OaSukpe.png"  width="700px">
 </p>
 
-### Details of offer
+### Login page 
+#### from which we can log in or go to the registration form.
 <p align="left"> 
-  <img src="https://i.imgur.com/9x8diod.png"  width="700px">
+  <img src="https://i.imgur.com/jGP8IEv.png"  width="700px">
+</p>
+
+### Registration form
+<p align="left"> 
+  <img src="https://i.imgur.com/FgS39JM.png"  width="700px">
+</p>
+
+### After logging in
+#### you can add/delete your products to cart.
+<p align="left"> 
+  <img src="https://i.imgur.com/SYEe1lj.png"  width="700px">
+</p>
+<p align="left"> 
+  <img src="https://i.imgur.com/POEGELC.png"  width="700px">
+</p>
+
+### View cart
+<p align="left"> 
+  <img src="https://i.imgur.com/4XkDm9Z.png"  width="700px">
+</p>
+
+### Order
+<p align="left"> 
+  <img src="https://i.imgur.com/80oL1Na.png"  width="700px">
 </p>
 
 ## Status of project: 
