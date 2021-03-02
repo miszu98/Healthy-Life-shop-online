@@ -1,5 +1,5 @@
 # Healthy Life shop online
-##### Online store with healthy food for delivery
+ Online store with healthy food for delivery
 
 ## Assumptions
 ### The assumptions were to create a web application that would allow:
